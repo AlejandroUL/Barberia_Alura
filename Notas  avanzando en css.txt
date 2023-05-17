@@ -1,0 +1,171 @@
+Propidad FLOAT
+para que una imagen quede rodeada de texto
+
+float:left para qu quede a la izquierda
+osea con texto a la derecha 
+
+IMPORTAR FUENTES EXTERNAS 
+importar una fuente
+como de google fonts
+meterse a google fonts, seleccionar la letra
+y darl en link, ese va en el head del html
+y ahi mismo dice que poner en el css
+
+MAPAS
+
+sse va a googl maps, menu -> compartir o 
+incorporar mapa -> incorporar mapa
+y copiar el html
+esto usa la etiqueta iframe, crea areas 
+en las que se pueda poner algun tipo de 
+contenido.
+src y ahi se le pone lo que se le quiera poner
+
+VIDEOS
+darle incorporar en la seccion de compartir
+de youtube
+
+ESPACIAR LISTAS
+line-height:1.5;
+Da un espacio de 1.5 tamaño de letra entre lineas
+
+PSEUDO CLASES
+cuando tenemos varios objetos de la misma clasee
+pero quiero modificarle una cosita a uno de ellos
+
+.items:first-child{
+    font-weight: bold;
+}
+se pinta el primer item de negro, last-child
+seria para el ultimo
+
+.items:nth-child(#posicion del seleccionado){
+    font-weight: bold;
+}
+si se pone 2n serian todos los pares.
+
+GRADIENTES
+background: linear-gradient(color1,color2...);
+background: linear-gradient(grados, color...);
+background: linear-gradient(color1 50%,color2...);
+el color 1 ocupará el 50% de todo el espacio
+Hara l degradado de manera radial
+background: radiant-gradient();
+
+PSEUDO ELEMENTOS
+p:first-line{
+    font-style: italic;
+}
+solo la primera linea se vuelve italica
+
+.tituloprincipal:first-letter{
+    font-weight: bold;
+}
+primera letra negrita
+
+
+.tituloprincipal:before{
+    content: "[";
+}
+.tituloprincipal::after{
+     content: "]";
+}
+pone algo antees o despues de lo que se le dijo
+.items::before{
+    content: "★";
+}
+añade una estrella a cada item de la lista
+
+main>p{
+}
+selecciona solo los parrafos que son hijos
+directos del main
+
+img+p{
+}
+selecciona el parrafo que está despues de la imagen
+
+img~p{
+}
+todos los parrafos despues de la imagen
+
+.principal p:not(#mision){
+}
+le aplica a todos menos a el parrafo que tenga
+como id a mision.
+
+CALCULO CON CSS
+
+width:calc(40%-(26px));
+para que la imagen se adapte a la pantalla
+del usuaio, lo importante es la funcion calc
+
+Opacidad
+
+.imagendif:hover{
+    opacity: 0.4;
+}
+hace que la imagen tome un poco del color del
+fondo, es decir, en 0 el color va a ser el del
+fondo y en 1 la luz de la imagen va a pasar por 
+completo
+
+Sombras
+box-shadow: 10px 10px 30px 15px black, -10px -10px yellow;
+
+crea una sombra del objeto, lo primerro significa
+que la sombra va a empezar desde abajo, derecha, etc...
+30 px sel tamaño de la sombra y 15 el deesvanecido, y despues el color
+se le puede colocar diferentes sombras si se separan
+por una coma.
+SOMBRA INTERNA
+box-shadow: inset 0 0 30px red
+insert crea una sombra interna desde el punto
+de referencia puesto ahi que es de 0 0, osea
+el centro del objeto, 30 px de desvanecido.
+
+SOMBRA DE LETRAS
+text-shadow: 2px 2px 10px red;
+
+para hacer buenas sombras se puede experimentar
+en box shadow css generator mozilla
+
+DISEÑO RESPONSIVO
+Al momento de abrir la pagina desde diferentes
+pantallas de diferente tamaño que la pagina se 
+adapte a esto
+
+desde el entorno de desarrollador de chrome
+se puede ver como se ve la pantalla en diferentes
+celulares
+<meta name="viewport" content="widht=device-width"
+decirle al navegador que adapte la pagina al
+navegador.
+<meta name="viewport" content="width=device-width">
+se pone esa etiqueta en el html
+
+@media screen and (max-width:480px){
+body{
+background:red;
+}
+}
+media lo que hace es aplicar algun cambio
+cuando se teenga una excepcion como en estee caso
+el tamaño de la pantalla
+
+colocarle el width auto a los objetos
+@media screen and (max-width:480px){
+    .caja, .principal, .mapacon, .contenidodif, .diferencial, .video{
+        width: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+

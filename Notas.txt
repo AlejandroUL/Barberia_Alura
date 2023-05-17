@@ -1,0 +1,332 @@
+Cada pagina de navegacion tiene su propio
+HTML
+PARA CREAR UNA PAGINA
+
+Doctype
+
+html
+head
+	meta
+	title
+	link a css
+body
+
+<h1><img src="Imagenes/imagenes/logo.png"></h1>
+la imagen en un h1 para darle importancia
+Para crear una referencia a otra página
+se usa la etiqueta <a>
+esto da lins a nuestra propia pagina o a otra
+
+<a href = "link"> texto </a>
+
+Etiqueta para el panel de navegacion
+<nav>
+lista con opciones de navegacion
+</nav>
+
+display: inline; para los items de las listas
+que no ocupe el 100% de la pagina, que solo 
+ocupe lo que necesita
+
+text-transform: uppercase;
+coolocar las letras en 	MATUSCULA
+
+QUITAR EL SUBRAYADO POR DEFECTO
+text-decoration: none;
+
+MODFICAR MARGEN
+margin: 0 0 0 15px;
+arriba,abajo, derecha, izquierda,
+
+LIMPIANDO CSS
+desactivar las configuraciones por defecto
+del navegador.
+Para esto se usa el reset.css
+debe ir en una posicion anterior a los 
+archivos de estilo.
+borra todas esas margenes
+
+POSICION
+position: static; -> valor por defecto
+position: relative;
+top: 20px;
+left: 50px
+aquí se mueve la posicion respecto al 
+margen.
+
+postion: absolute;
+aqui se cambia la posicion inicial del elemento
+tambien se puebe con top, left, etc...
+
+width: 940px;
+como las pantallas ocupan masomnos 1280px
+940 es un 70%
+
+position: relative;
+margin: 0 auto;
+para poderr centrarlo, la posicion debe
+ser relativa, significa qu la posicion se 
+va a mover pero con specto a su posicion 
+original. quee es 0,0.
+auto cuadra automaticamente para que quede
+igual a lado y lado.
+
+<main>
+Contenido principal de la pagina
+</main>
+
+LISTA COMPLEJA
+solo un item tiene varias cosas adentro
+como una imagen, un parrafo,etc...
+
+
+BORDES
+border-color: #000000;
+color del borde que sea negro
+border-width: 3px; -> ancho
+border-style: solid; -> linea continua
+
+se puede hacer asi
+border: 2px solid black;
+
+redondeo
+funciona como poniendole un circulo de 
+cierto radio en una esquina
+border-radius: 10px;
+si se quiere solo darle el radio de cierta 
+esquina se coloca borter-top-left-radius:
+
+Pasarle por encima a algo y hacer algo
+nav a:hover{
+    color: #c78c19
+}
+hover captura cuando uno se para en algo
+esto quiere decir que cuando uno se para 
+en nav a se debe cambiar el color.
+
+text-decoration: underline; 
+para que cuando se le pase por encima se 
+subraye.
+
+.productos li:active{
+    
+}
+hacer algo cuando se le da click
+
+.productos li:hover h2{
+    font-size: 36px;
+}
+
+para reemplazar una caracteriztica que ya 
+estaba se debe seleccionar la caja
+de afuera con el hover para capturar el 
+evento y despues seleccionar a lo que se 
+quiere aplicar el cambio
+
+PIE DE PAGINA
+<footer>
+pie dee pagina
+</footer> 
+
+background con textura
+background: url(Imagenes/imagenes/bg.jpg)
+lo que hace es copiar y pegar la imagen 
+para que ocupe todo el fondo
+
+CARACTERES ESPECIALES
+Como hacer la C de copyright.
+unicode-table.com
+buscar copyright
+y se copia y pega el codigo unico en el
+html nomlamente se usa el tipo entidad.
+<p class="copyright">&copy Copyright barberia
+ alura 2023</p>
+
+FORMULARUIOS
+
+Donde el cliente inserta datos y son consumidos
+por la página.
+
+<form>
+<label for="nombreapellido">Nombre y apellido</label>
+<input type="text" id="nombreapellido">
+</form>
+
+form para crear un formulario, una entrada
+tipo google
+input para el tipo de entrada
+label para darle nombre
+id para casar las dos etiqutas
+
+ENVIAR LOS DATOS
+<input type="submit" value="Enviar Formulario">
+
+
+main form input{
+display: block;
+margin: 0 0 20px;
+padding: 10px 25px;
+}
+
+INPUT DE DATOS COMPLEJOS
+
+ <textarea cols="70" rows="10" id="mensaje"></textarea>
+Un campo para escribir un mensaje, este campo
+tiene un tamaño que pued ser modificado con
+
+seleccionadores
+
+<label for="raio-telefono">Email</label>
+<input type="radio" value="telefono" id="raio-email">
+
+para que solo quede seleccionado uno de estos
+hay una propiedad que se llama name
+
+<label for="radio-whatsapp">WhatsApp</label>
+<input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp"> 
+se le debe dar el name igual a todos.
+
+<input type="checkbox>
+para que salga la cajita que se chulea
+
+REPLICAR ESTILOS
+main form input, form textarea{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+siempre un labeel aldra antes que el input
+para cambiar esto se debe poner el input
+dentro deel label y despues el mensaje.
+<label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" 
+id="radio-whatsapp"> WhatsApp</label>
+
+JERARQUIA EN EL CSS
+Mas impotante ID, luego CLASE y luego
+ETIQUETA.
+cada una de estas tiene un peso, este peso
+se va sumando y css elije el que tenga mas peso
+por lo tanto si una etiqueta es mas especifica
+va a elegir a esta.
+
+para seleccionar ID se hace con #
+pero la que pesa mas es la configracion
+del html
+
+SELECTOR DESPLEGABLE
+con la etiqueta select, para meterle opciones
+se usa la etiqueta option.
+
+<select>
+<option>Mañana</option>
+<option>Tarde</option>
+<option>Noche</option>
+</select>
+
+MOBILEINPUTTYPES.COM
+pagina que dice los diferentes tipos de input
+para que al colocarloes se coloquen cosas
+adicionales qu ayudn a rellenar de manera mas 
+facil el formulario en un celular.
+se pude usar como type="password"
+type="tel"
+type="email"
+
+DEFINIR CAMPOS COMO OBLIGATORIOS
+con la palaba REQUIRED
+<input type="text" id="nombreapellido" 
+class="input-padron" required>
+
+PLACEHOLDER
+guia para los inputs
+placeholder="(XX) XXX XXXXXX"
+esto se colosa dntro del input.
+
+SELECCIONADO POR DEFECTO
+checked en el input
+
+CUANDO EN UNOS INPUTS SE TIENEN DATOS
+QUE SE RELACIONAN ENTRE SI 
+ se puede agrupar en un 
+
+<fieldset>
+<legend> titulo del campo </legend>
+</fieldset>
+
+TEXTO ALTERNATIVO DE UNA IMAGEN
+
+alt="Logo de la barberia"
+sirve por si no carga la imagen para que 
+aparezcaeste texto en lugar de la imagen
+
+TRANSICIONES
+
+la propiedad transition se le coloca en el
+CSS principal
+cursor: pointer;
+transition: 0.5s background;
+}
+
+cursor:pointer sirve para que se ponga
+la manito cuando uno se pare en la zona
+
+luego se hace un hover para que cambie cuando
+uno se le para encima
+.enviar:hover{
+    background-color: darkorange;
+}
+
+transform: scale(1.2);
+
+se pone en el hover, esto se usa para poner
+todo mas grandee, esto sirve para destacar 
+algun bojeto
+
+transform:rotate(50deg)
+sirve para rotar un elemento.
+
+si se quiere que haga varias transofrmaciones 
+al tiempo
+transform: rotate(50deg) scale(1.2) 
+
+TABLAS
+tiene filas y columnas
+<table>
+	<tr>
+		<td>Día</td>
+		<td>Horario</td>                  
+	</tr>
+</table>
+
+se abre con table, luego cada fila se pone
+con <tr> y cada columna en esa fila se pone
+como <td>
+
+
+SEMANTICA EN TABLAS
+la tabla va a tener ncabezado y cuerpo
+
+<thead>
+        <tr>                    
+               <th>Día</th>
+               <th>Horario</th>                    
+	</tr>
+</thead>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
